@@ -20,7 +20,7 @@
 	- [Reinforcement Learning (Học Củng Cố)](https://machinelearningcoban.com/2016/12/27/categories/#reinforcement-learning-hoc-cung-co)
 
 
-## Lộ trinh học Machine Learning
+## Lộ trình học Machine Learning
 |STT|Tên nội dung                	  |Thời gian    |Nội dung học                                                                       |Ghi chú|
 |:-:|:-----------------------------------:|:-----------:|:---------------------------------------------------------------------------------:|:--:|
 |1  |Giới thiệu về AI và Ứng dụng của AI  |3 ngày	|Khaí niệm, các ứng dụng Ai trong cuộc sống, Những khả năng trong tương lai của AI đang hướng đến (tự tìm hiểu thêm)|[link]()|
@@ -30,6 +30,7 @@
 ## Học Có giám sát (Supervised Learning)
 |STT|Tên nội dung                	  |Thời gian    |Nội dung học                                                                       |Ghi chú|
 |:-:|:-----------------------------------:|:-----------:|:---------------------------------------------------------------------------------:|:--:|
+|0|Tài liệu||Tự lấy về nghiên cứu, nghiên cứu nhiều loại sách khác nhau để hiểu rõ hơn về nội dung học |[link]()|
 |1  |Python basic	  |	|Tự học và tìm hiểu về các câu lệnh cơ bản và những thư viện như numpy, pandas, matplotlib (kiến thức quan trọng làm bước đệm học ML)|[link]()|
 |2  |Math for Machine Learning	  |2 tuần trước khi học	|Chuẩn bị trước một số kiến thức về đại số, giải tích và xác suất thống kê trước khi học ML|[link]()|
 |3  |Gradient Descent	  |1 tuần	|Phương pháp tối ưu cập nhật trọng số dựa theo nguyên tắc GD|[link]()|
