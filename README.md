@@ -23,7 +23,7 @@
 ## Lộ trình học Machine Learning
 |STT|Tên nội dung                	  |Thời gian    |Nội dung học                                                                       |Ghi chú|
 |:-:|:-----------------------------------:|:-----------:|:---------------------------------------------------------------------------------:|:--:|
-|1  |Giới thiệu về AI và Ứng dụng của AI  |3 ngày	|Khaí niệm, các ứng dụng Ai trong cuộc sống, Những khả năng trong tương lai của AI đang hướng đến (tự tìm hiểu thêm)|[link]()|
+|1  |Giới thiệu về AI và Ứng dụng của AI  |3 ngày	|Khaí niệm, các ứng dụng Ai trong cuộc sống, Những khả năng trong tương lai của AI đang hướng đến (tự tìm hiểu thêm)| [link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/0_Tai_Lieu/T%C3%A0i_li%E1%BB%87u_Machine_Learning_c%C6%A1_b%E1%BA%A3n)|
 |2  |Giới thiệu về Machine Learning	  |1 ngày	|Khái niệm về học máy, các bài toán trong học máy (tự tìm hiểu thêm)|[link]()|
 
 
