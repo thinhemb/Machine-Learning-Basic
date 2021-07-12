@@ -23,14 +23,14 @@
 ## Lộ trình học Machine Learning
 |STT|Tên nội dung                	  |Thời gian    |Nội dung học                                                                       |Ghi chú|
 |:-:|:-----------------------------------:|:-----------:|:---------------------------------------------------------------------------------:|:--:|
-|1  |Giới thiệu về AI và Ứng dụng của AI  |3 ngày	|Khaí niệm, các ứng dụng Ai trong cuộc sống, Những khả năng trong tương lai của AI đang hướng đến (tự tìm hiểu thêm)| [link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/0_Tai_Lieu/T%C3%A0i_li%E1%BB%87u_Machine_Learning_c%C6%A1_b%E1%BA%A3n)|
-|2  |Giới thiệu về Machine Learning	  |1 ngày	|Khái niệm về học máy, các bài toán trong học máy (tự tìm hiểu thêm)|[link]()|
+|1  |Giới thiệu về AI và Ứng dụng của AI  |3 ngày	|Khaí niệm, các ứng dụng Ai trong cuộc sống, Những khả năng trong tương lai của AI đang hướng đến (tự tìm hiểu thêm)| [link](https://machinelearningcoban.com/2016/12/26/introduce/)|
+|2  |Giới thiệu về Machine Learning	  |1 ngày	|Khái niệm về học máy, các bài toán trong học máy (tự tìm hiểu thêm)|[link](https://machinelearningcoban.com/2016/12/27/categories/)|
 
 
 ## Học Có giám sát (Supervised Learning)
 |STT|Tên nội dung                	  |Thời gian    |Nội dung học                                                                       |Ghi chú|
 |:-:|:-----------------------------------:|:-----------:|:---------------------------------------------------------------------------------:|:--:|
-|0|Tài liệu||Tự lấy về nghiên cứu, nghiên cứu nhiều loại sách khác nhau để hiểu rõ hơn về nội dung học |[link]()|
+|0|Tài liệu||Tự lấy về nghiên cứu, nghiên cứu nhiều loại sách khác nhau để hiểu rõ hơn về nội dung học |[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/0_Tai_Lieu/T%C3%A0i_li%E1%BB%87u_Machine_Learning_c%C6%A1_b%E1%BA%A3n)|
 |1  |Python basic	  |	|Tự học và tìm hiểu về các câu lệnh cơ bản và những thư viện như numpy, pandas, matplotlib (kiến thức quan trọng làm bước đệm học ML)|[link]()|
 |2  |Math for Machine Learning	  |2 tuần trước khi học	|Chuẩn bị trước một số kiến thức về đại số, giải tích và xác suất thống kê trước khi học ML|[link]()|
 |3  |Gradient Descent	  |1 tuần	|Phương pháp tối ưu cập nhật trọng số dựa theo nguyên tắc GD|[link]()|
