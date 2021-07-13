@@ -31,7 +31,7 @@
 |STT|Tên nội dung                	  |Thời gian    |Nội dung học                                                                       |Ghi chú|
 |:-:|:-----------------------------------:|:-----------:|:---------------------------------------------------------------------------------:|:--:|
 |0|Tài liệu||Tự lấy về nghiên cứu, nghiên cứu nhiều loại sách khác nhau để hiểu rõ hơn về nội dung học |[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/0_Tai_Lieu/T%C3%A0i_li%E1%BB%87u_Machine_Learning_c%C6%A1_b%E1%BA%A3n)|
-|1  |Python basic	  |	|Tự học và tìm hiểu về các câu lệnh cơ bản và những thư viện như numpy, pandas, matplotlib (kiến thức quan trọng làm bước đệm học ML)|[link]()|
+|1  |Python basic	  |	|Tự học và tìm hiểu về các câu lệnh cơ bản và những thư viện như numpy, pandas, matplotlib (kiến thức quan trọng làm bước đệm học ML)|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/1_Python_basic)|
 |2  |Math for Machine Learning	  |2 tuần trước khi học	|Chuẩn bị trước một số kiến thức về đại số, giải tích và xác suất thống kê trước khi học ML|[link]()|
 |3  |Gradient Descent	  |1 tuần	|Phương pháp tối ưu cập nhật trọng số dựa theo nguyên tắc GD|[link]()|
 |4  |Linear Regression	  |1 tuần	|Vận dụng bài hồi quy tuyến cho bài toán dự đoán giá nhà.|[link]()|
