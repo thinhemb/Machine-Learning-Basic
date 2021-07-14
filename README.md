@@ -12,7 +12,7 @@
 - -Học sâu(Deep learning): Một trường con của học máy sử dụng mạng nơ-ron nhiều lớp. Thông thường, “học máy” và “học sâu” được sử dụng thay thế cho nhau.
 # Machine Learning
 - Machine Learning [(Đọc thêm)](https://machinelearningcoban.com/2016/12/27/categories/): 
-	- [Supervised Learning (Học có giám sát) ](https://machinelearningcoban.com/2016/12/27/categories/#supervised-learning-hoc-co-giam-sat) [( trọng tâm trong khóa học này)]<br>
+	- [Supervised Learning (Học có giám sát) ](https://machinelearningcoban.com/2016/12/27/categories/#supervised-learning-hoc-co-giam-sat) [( trọng tâm trong repository này)]<br>
     		- [ Classification (Phân loại)](https://machinelearningcoban.com/2016/12/27/categories/#classification-phan-loai)<br>
     		- [ Regression (Hồi quy)](https://machinelearningcoban.com/2016/12/27/categories/#regression-hoi-quy)
 	- [Unsupervised Learning (Học không giám sát)](https://machinelearningcoban.com/2016/12/27/categories/#unsupervised-learning-hoc-khong-giam-sat)
@@ -32,7 +32,7 @@
 |:-:|:-----------------------------------:|:-----------:|:---------------------------------------------------------------------------------:|:--:|
 |0|Tài liệu||Tự lấy về nghiên cứu, nghiên cứu nhiều loại sách khác nhau để hiểu rõ hơn về nội dung học |[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/0_Tai_Lieu/T%C3%A0i_li%E1%BB%87u_Machine_Learning_c%C6%A1_b%E1%BA%A3n)|
 |1  |Python basic	  |	|Tự học và tìm hiểu về các câu lệnh cơ bản và những thư viện như numpy, pandas, matplotlib (kiến thức quan trọng làm bước đệm học ML)|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/1_Python_basic)|
-|2  |Math for Machine Learning	  |2 tuần trước khi học	|Chuẩn bị trước một số kiến thức về đại số, giải tích và xác suất thống kê trước khi học ML|[link]()|
+|2  |Math for Machine Learning	  |2 tuần trước khi học	|Chuẩn bị trước một số kiến thức về đại số, giải tích và xác suất thống kê trước khi học ML|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/2_Math_for_Machine_Learning)|
 |3  |Gradient Descent	  |1 tuần	|Phương pháp tối ưu cập nhật trọng số dựa theo nguyên tắc GD|[link]()|
 |4  |Linear Regression	  |1 tuần	|Vận dụng bài hồi quy tuyến cho bài toán dự đoán giá nhà.|[link]()|
 |5  |Binary Classification	  |1 ngày	|PLA, Logistic Regression, Softmax Regression|[link]()|
