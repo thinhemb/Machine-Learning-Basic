@@ -34,7 +34,7 @@
 |1  |Python basic	  |	|Tự học và tìm hiểu về các câu lệnh cơ bản và những thư viện như numpy, pandas, matplotlib (kiến thức quan trọng làm bước đệm học ML)|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/1_Python_basic)|
 |2  |Math for Machine Learning	  |2 tuần trước khi học	|Chuẩn bị trước một số kiến thức về đại số, giải tích và xác suất thống kê trước khi học ML|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/2_Math_for_Machine_Learning)|
 |3  |Gradient Descent	  |1 tuần	|Phương pháp tối ưu cập nhật trọng số dựa theo nguyên tắc GD|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/3_Gadient_Descent)|
-|4  |Linear Regression	  |1 tuần	|Vận dụng bài hồi quy tuyến cho bài toán dự đoán giá nhà.|[link]()|
+|4  |Linear Regression	  |1 tuần	|Vận dụng bài hồi quy tuyến cho bài toán dự đoán giá nhà.|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/4_Linear_regression)|
 |5  |Binary Classification	  |1 ngày	|PLA, Logistic Regression, Softmax Regression|[link]()|
 |6  |SVM and MLP	  |2 tuần(1 tuần 1 bài) 	|SVM, MLP,Backpropagation|[link]()|
 |7  |Overfitting, Underfitting	  |1 ngày	|Khái niệm về học máy, các bài toán trong học máy|[link]()|
