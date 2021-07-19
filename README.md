@@ -35,8 +35,8 @@
 |2  |Math for Machine Learning	  |2 tuần trước khi học	|Chuẩn bị trước một số kiến thức về đại số, giải tích và xác suất thống kê trước khi học ML|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/2_Math_for_Machine_Learning)|
 |3  |Gradient Descent	  |1 tuần	|Phương pháp tối ưu cập nhật trọng số dựa theo nguyên tắc GD|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/3_Gadient_Descent)|
 |4  |Linear Regression	  |1 tuần	|Vận dụng bài hồi quy tuyến cho bài toán dự đoán giá nhà.|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/4_Linear_regression)|
-|5  |Binary Classification	  |1 ngày	|PLA, Logistic Regression, Softmax Regression|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/5_Binary_Classification)|
-|6  |SVM and MLP	  |2 tuần(1 tuần 1 bài) 	|SVM, MLP,Backpropagation|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/6_SVM_and_MLP)|
+|5  |Binary Classification	  |3 tuần (1tuần 1 bài)|PLA, Logistic Regression, Softmax Regression|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/5_Binary_Classification)|
+|6  |SVM and MLP	  |2 tuần (1 tuần 1 bài) 	|SVM, MLP,Backpropagation|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/6_SVM_and_MLP)|
 |7  |Overfitting, Underfitting	  |1 ngày	|Khái niệm về học máy, các bài toán trong học máy|[link]()|
 |8  |Feature Engineering	  |1 ngày	| Giới thiệu các kĩ thuật trích đặc trưng ảnh|[link]()|
 |9  |Quy trình giải một bài toán ML 	  |1 ngày	|Các bước thực hiện triển khai một bài toán ML|[link]()|
