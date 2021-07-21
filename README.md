@@ -1,6 +1,6 @@
 
 # Giới thiệu về  Artificial Intelligence
-- Mình tham khảo của anh [tiepvupsu](https://github.com/tiepvupsu/ebookML_src) . Người viết cuốn [ebookML]().
+- Mình tham khảo của anh [tiepvupsu](https://github.com/tiepvupsu/ebookML_src) . Người viết cuốn [ebookML]() và một số repo của các vị tiền bối .
 - Khi học Machine Learning, bạn sẽ bắt gặp nhiều thuật ngữ khác nhau như trí tuệ nhân tạo, máy học, mạng thần kinh và học sâu. Nhưng những thuật ngữ này thực sự có 	nghĩa là gì và chúng liên quan với nhau như thế nào? 
 
 - Dưới đây chúng tôi mô tả ngắn gọn về các thuật ngữ này:
@@ -38,7 +38,7 @@
 |5  |Binary Classification	  |3 tuần (1tuần 1 bài)|PLA, Logistic Regression, Softmax Regression|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/5_Binary_Classification)|
 |6  |SVM and MLP	  |2 tuần (1 tuần 1 bài) 	|SVM, MLP,Backpropagation|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/6_SVM_and_MLP)|
 |7  |Overfitting, Underfitting	  |1 ngày	|Khái niệm về học máy, các bài toán trong học máy|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/7_Overfitting_and_Underfitting)|
-|8  |Feature Engineering	  |1 ngày	| Giới thiệu các kĩ thuật trích đặc trưng ảnh|[link]()|
+|8  |Feature Engineering	  |1 ngày	| Giới thiệu các kĩ thuật trích đặc trưng ảnh|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/8_Feature_Engineering)|
 |9  |Quy trình giải một bài toán ML 	  |1 ngày	|Các bước thực hiện triển khai một bài toán ML|[link]()|
 |10  |Tiền xử lý dữ liệu 	  |1 ngày	|Các phương pháp tiền xử lý dữ liệu: lọc nhiễu, làm giàu dữ liệu …|[link]()|
 |11 |Vận dụng	  |2 tuần	|Phân loại chữ số viết tay: MNIST, Iris, CIFA-10. Phân loại với tập dataset thực tế.|[link]()|
