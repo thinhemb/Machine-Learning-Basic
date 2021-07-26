@@ -39,7 +39,7 @@
 |6  |SVM and MLP	  |2 tuần (1 tuần 1 bài) 	|SVM, MLP,Backpropagation|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/6_SVM_and_MLP)|
 |7  |Overfitting, Underfitting	  |1 ngày	|Khái niệm về học máy, các bài toán trong học máy|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/7_Overfitting_and_Underfitting)|
 |8  |Feature Engineering	  |1 ngày	| Giới thiệu các kĩ thuật trích đặc trưng ảnh|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/8_Feature_Engineering)|
-|9  |Quy trình giải một bài toán ML 	  |1 ngày	|Các bước thực hiện triển khai một bài toán ML|[link]()|
+|9  |Quy trình giải một bài toán ML 	  |1 ngày	|Các bước thực hiện triển khai một bài toán ML|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/9_Quy_trinh_giai_mot_bai_toan_ML)|
 |10  |Tiền xử lý dữ liệu 	  |1 ngày	|Các phương pháp tiền xử lý dữ liệu: lọc nhiễu, làm giàu dữ liệu …|[link]()|
 |11 |Vận dụng	  |2 tuần	|Phân loại chữ số viết tay: MNIST, Iris, CIFA-10. Phân loại với tập dataset thực tế.|[link]()|
 
