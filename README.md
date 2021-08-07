@@ -42,6 +42,6 @@
 |9  |Quy trình giải một bài toán ML 	  |1 ngày	|Các bước thực hiện triển khai một bài toán ML|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/9_Quy_trinh_giai_mot_bai_toan_ML)|
 |10  |Tiền xử lý dữ liệu 	  |1 ngày	|Các phương pháp tiền xử lý dữ liệu: lọc nhiễu, làm giàu dữ liệu …|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/10_Tien_xu_ly_du_lieu)|
 |11 |Vận dụng	  |2 tuần	|Phân loại chữ số viết tay: Iris, CIFA-10. Phân loại với tập dataset thực tế.|[link]()|
-|12 |Cách đọc paper  |1 ngày|Các bước đọc paper|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/9.4_Doc%20pager)|
+|12 |Cách đọc paper survey  |1 ngày|Các bước đọc paper|[link](https://github.com/thinhemb/Machine-Learning-Basic/tree/master/9.4_Doc%20pager)|
 
 
