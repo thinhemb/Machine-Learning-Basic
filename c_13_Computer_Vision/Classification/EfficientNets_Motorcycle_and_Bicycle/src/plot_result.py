@@ -80,7 +80,7 @@ def plot_confusion_matrix(labels, pred_labels, classes):
     plt.xticks(rotation = 90)
     plt.xlabel('Predicted Label', fontsize = 20)
     plt.ylabel('True Label', fontsize = 20)
-    plt.savefig('./output/confusion_matrix.jpg', dpi=300)
+    plt.savefig('./output/test/confusion_matrix.jpg', dpi=300)
 
 def Confusion_matrix(model, path_val,val_dl,device):
     classes = os.listdir(path_val)
