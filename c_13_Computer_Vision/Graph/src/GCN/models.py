@@ -5,7 +5,7 @@ from layers import GCNConv
 
 
 class GCN(nn.Module):
-    def __init__(self, input_size, hidden_size, output_size, num_hidden_layers=0, dropout=0.1, residual=False):
+    def __init__(self, input_size, hidden_size, output_size, num_hidden_layers=0, dropout=0.1, residual=True):
         super(GCN, self).__init__()
 
         self.dropout = dropout

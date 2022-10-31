@@ -1,0 +1,13 @@
+*.xml
+*.iml
+.idea
+*pycache
+.idea/
+logs/
+*.pth
+*.so
+*.pyc
+*.o
+*_ext*
+/c_13_Computer_Vision/Graph/data
+*pkl
