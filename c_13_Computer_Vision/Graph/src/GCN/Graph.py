@@ -39,7 +39,7 @@ class Graph():
 
     def get_edge(self):
         
-        self.num_node = 20
+        self.num_node = 21
         self_link = [(i, i) for i in range(self.num_node)]
         neighbor_link = [(0, 1), (1, 2), (2, 3), (3, 4),
                          (0, 5), (5,6),(6,7),(7,8),
