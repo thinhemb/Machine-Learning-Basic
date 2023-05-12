@@ -7,6 +7,7 @@
 #include "opencv2/opencv.hpp"
 #include "BYTETracker.h"
 #include "STrack.h"
+
 using namespace std;
 
 const std::vector<std::string> CLASS_NAMES = {"Glass", "Paper", "Metal", "Plastic", "Battery", "Organic"};
@@ -26,8 +27,8 @@ void draw_objs(const cv::Mat& image,const std::vector<Object>& objs,const std::v
 					cv::Scalar s = tracker->get_color(output_stracks[i].track_id);
 					 char text[256];
                 	sprintf(text, "%d %s %.2f%%",output_stracks[i].track_id , CLASS_NAMES[objs[i].label].c_str(), objs[i].prob * 100);
-					fprintf(stderr, "%s = %.4f at %f %f %lf x %lf\n", CLASS_NAMES[objs[i].label].c_str(), objs[i].prob,
-							objs[i].rect.x, objs[i].rect.y, objs[i].rect.width, objs[i].rect.height);
+					// fprintf(stderr, "%s = %.4f at %f %f %lf x %lf\n", CLASS_NAMES[objs[i].label].c_str(), objs[i].prob,
+					// 		objs[i].rect.x, objs[i].rect.y, objs[i].rect.width, objs[i].rect.height);
 					cv::putText(image, text, cv::Point(tlwh[0], tlwh[1] - 5),0, 0.6, cv::Scalar(0, 0, 255), 2, LINE_AA);
 
 					cv::rectangle(image, cv::Rect(tlwh[0], tlwh[1], tlwh[2], tlwh[3]), s, 2);
@@ -50,9 +51,13 @@ void draw_objs(const cv::Mat& image,const std::vector<Object>& objs,const std::v
 
 int main(int argc, char **argv)
 {
+	// auto start_ = std::chrono::system_clock::now();
+	// system("yolo track tracker=/home/thinhdo/Study/Machine-Learning-Basic/c_13_Computer_Vision/3.C++/yolov8_ByteTrack_TensorRT/config_bytetrack.yaml model=/home/thinhdo/Study/Machine-Learning-Basic/c_13_Computer_Vision/3.C++/yolov8_ByteTrack_TensorRT/model/best.pt source=/home/thinhdo/Study/Machine-Learning-Basic/c_13_Computer_Vision/3.C++/yolov8_ByteTrack_TensorRT/data/test.mp4 imgsz=640 conf=0.25 iou=0.65 show save=true device=cpu");
+	// auto end_ = std::chrono::system_clock::now();
 
+	// printf(" time cost %2.4lf ms\n", chrono::duration_cast<chrono::microseconds>(end_ - start_).count() / 1000.);
 	
-
+	
 	int deviceCount;
 	cudaGetDeviceCount(&deviceCount);
 	std::cout << deviceCount << std::endl;
@@ -64,7 +69,7 @@ int main(int argc, char **argv)
 	cudaSetDevice(0);
 	std::string engine_file_path;
 
-	engine_file_path = "/home/thinhdo/Study/yolov8_ByteTrack_TensorRT/model/best.engine";
+	engine_file_path = "../model/best.engine";
 
 	const std::string path{argv[1]};
 	std::cout << "path= " << path << std::endl;
@@ -72,6 +77,7 @@ int main(int argc, char **argv)
 	bool isVideo{false};
 
 	assert(argc == 3);
+	
 	if (IsFile(path))
 	{
 		std::string suffix = path.substr(path.find_last_of('.') + 1);
@@ -102,7 +108,8 @@ int main(int argc, char **argv)
 	{
 		cv::glob(path + "/*.jpg", imagePathList);
 	}
-
+	auto start1 = std::chrono::system_clock::now();
+	auto start=std::chrono::system_clock::now();
 	// std::cout<<"path:"<<path<<std::endl;
 	auto yolov8 = new YOLOv8(engine_file_path);
 
@@ -131,6 +138,7 @@ int main(int argc, char **argv)
 		cv::VideoWriter video("../data/video_output/output1.mp4", cv::VideoWriter::fourcc('m', 'p', '4', 'v'), 10, size);
 		// int fps = cap.get(cv::CAP_PROP_FPS);
 		// std::cout<<fps<<std::endl;
+		start = std::chrono::system_clock::now();
 		while (cap.read(image))
 		{
 			num_frames++;
@@ -140,9 +148,8 @@ int main(int argc, char **argv)
 			// cv::Mat image_=image;
 			cv::resize(image,image,size,cv::INTER_LINEAR);
 			yolov8->copy_from_Mat(image, size);
-			auto start = std::chrono::system_clock::now();
 			yolov8->infer();
-			auto end = std::chrono::system_clock::now();
+			
 
 			// printf("infer time cost %2.4lf ms\n", chrono::duration_cast<chrono::microseconds>(end - start).count() / 1000.);
 
@@ -176,6 +183,9 @@ int main(int argc, char **argv)
 			}
 		}
 		video.release();
+		auto end = std::chrono::system_clock::now();
+	printf(" time1 cost %2.4lf ms\n", chrono::duration_cast<chrono::microseconds>(start - start1).count() / 1000.);
+	printf(" time cost %2.4lf ms\n", chrono::duration_cast<chrono::microseconds>(end - start1).count() / 1000.);
 	}
 	else
 	{
