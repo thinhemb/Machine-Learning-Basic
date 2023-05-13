@@ -136,9 +136,7 @@ int main(int argc, char **argv)
 
 		
 		cv::VideoWriter video("../data/video_output/output1.mp4", cv::VideoWriter::fourcc('m', 'p', '4', 'v'), 10, size);
-		// int fps = cap.get(cv::CAP_PROP_FPS);
-		// std::cout<<fps<<std::endl;
-		start = std::chrono::system_clock::now();
+		
 		while (cap.read(image))
 		{
 			num_frames++;
@@ -148,8 +146,9 @@ int main(int argc, char **argv)
 			// cv::Mat image_=image;
 			cv::resize(image,image,size,cv::INTER_LINEAR);
 			yolov8->copy_from_Mat(image, size);
+			auto start = std::chrono::system_clock::now();
 			yolov8->infer();
-			
+			auto end = std::chrono::system_clock::now();
 
 			// printf("infer time cost %2.4lf ms\n", chrono::duration_cast<chrono::microseconds>(end - start).count() / 1000.);
 
@@ -183,9 +182,7 @@ int main(int argc, char **argv)
 			}
 		}
 		video.release();
-		auto end = std::chrono::system_clock::now();
-	printf(" time1 cost %2.4lf ms\n", chrono::duration_cast<chrono::microseconds>(start - start1).count() / 1000.);
-	printf(" time cost %2.4lf ms\n", chrono::duration_cast<chrono::microseconds>(end - start1).count() / 1000.);
+
 	}
 	else
 	{
