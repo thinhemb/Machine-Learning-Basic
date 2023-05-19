@@ -1,3 +1,5 @@
-                        Time_CPU(ms/frame)   Time_GPU(ms/frame) (2027)
-yolov8_bytetrack_python  204.369               139.917
-yolov8_bytetrack_C++                            52.287
+                        Time_CPU(ms/frame)   Time_GPU(ms/frame) (2027) 1107.2210
+yolov8n_bytetrack_python   169775.381        35.2
+yolov8n_bytetrack_C++                            24.56 
+yolov8m_bytetrack_python  204.369               139.917
+yolov8m_bytetrack_C++                            52.287

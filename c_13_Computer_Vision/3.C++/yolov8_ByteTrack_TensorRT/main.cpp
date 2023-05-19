@@ -52,10 +52,10 @@ void draw_objs(const cv::Mat& image,const std::vector<Object>& objs,const std::v
 int main(int argc, char **argv)
 {
 	// auto start_ = std::chrono::system_clock::now();
-	// system("yolo track tracker=/home/thinhdo/Study/Machine-Learning-Basic/c_13_Computer_Vision/3.C++/yolov8_ByteTrack_TensorRT/config_bytetrack.yaml model=/home/thinhdo/Study/Machine-Learning-Basic/c_13_Computer_Vision/3.C++/yolov8_ByteTrack_TensorRT/model/best.pt source=/home/thinhdo/Study/Machine-Learning-Basic/c_13_Computer_Vision/3.C++/yolov8_ByteTrack_TensorRT/data/test.mp4 imgsz=640 conf=0.25 iou=0.65 show save=true device=cpu");
+	// system("yolo track tracker=/home/thinhdo/Study/Machine-Learning-Basic/c_13_Computer_Vision/3.C++/yolov8_ByteTrack_TensorRT/config_bytetrack.yaml model=/home/thinhdo/Study/Machine-Learning-Basic/c_13_Computer_Vision/3.C++/yolov8_ByteTrack_TensorRT/model_yolov8n/train14/weights/best.pt source=/home/thinhdo/Study/Machine-Learning-Basic/c_13_Computer_Vision/3.C++/yolov8_ByteTrack_TensorRT/data/test.mp4 imgsz=640 conf=0.25 iou=0.65 show save=true device=cpu");
 	// auto end_ = std::chrono::system_clock::now();
 
-	// printf(" time cost %2.4lf ms\n", chrono::duration_cast<chrono::microseconds>(end_ - start_).count() / 1000.);
+	// printf(" python time cost %2.4lf ms\n", chrono::duration_cast<chrono::milliseconds>(end_ - start_).count() / 1000.);
 	
 	
 	int deviceCount;
@@ -69,7 +69,7 @@ int main(int argc, char **argv)
 	cudaSetDevice(0);
 	std::string engine_file_path;
 
-	engine_file_path = "../model/best.engine";
+	engine_file_path = "../model_yolov8n/train14/weights/best.engine";
 
 	const std::string path{argv[1]};
 	std::cout << "path= " << path << std::endl;
@@ -108,8 +108,8 @@ int main(int argc, char **argv)
 	{
 		cv::glob(path + "/*.jpg", imagePathList);
 	}
-	auto start1 = std::chrono::system_clock::now();
-	auto start=std::chrono::system_clock::now();
+	auto s1 = std::chrono::system_clock::now();
+	auto s2=std::chrono::system_clock::now();
 	// std::cout<<"path:"<<path<<std::endl;
 	auto yolov8 = new YOLOv8(engine_file_path);
 
@@ -136,21 +136,25 @@ int main(int argc, char **argv)
 
 		
 		cv::VideoWriter video("../data/video_output/output1.mp4", cv::VideoWriter::fourcc('m', 'p', '4', 'v'), 10, size);
-		
+		s2=std::chrono::system_clock::now();
+		printf("init time cost %2.4lf ms\n", chrono::duration_cast<chrono::milliseconds>(s2 - s1).count() / 1000.);
+		auto start = std::chrono::system_clock::now();
 		while (cap.read(image))
 		{
+
 			num_frames++;
 			
 			
 			objs.clear();
 			// cv::Mat image_=image;
 			cv::resize(image,image,size,cv::INTER_LINEAR);
-			yolov8->copy_from_Mat(image, size);
-			auto start = std::chrono::system_clock::now();
-			yolov8->infer();
-			auto end = std::chrono::system_clock::now();
 
-			// printf("infer time cost %2.4lf ms\n", chrono::duration_cast<chrono::microseconds>(end - start).count() / 1000.);
+			
+			yolov8->copy_from_Mat(image, size);
+			
+			yolov8->infer();
+
+			// printf("infer time cost %2.4lf ms\n", chrono::duration_cast<chrono::milliseconds>(end - start).count() / 1000.);
 
 			yolov8->postprocess(objs);
 
@@ -159,21 +163,22 @@ int main(int argc, char **argv)
 
 			auto trackerend = std::chrono::system_clock::now();
 
-			// printf("tracker cost %2.4lf ms\n", chrono::duration_cast<chrono::microseconds>(trackerend - trackerstart).count() / 1000.);
+			// printf("tracker cost %2.4lf ms\n", chrono::duration_cast<chrono::milliseconds>(trackerend - trackerstart).count() / 1000.);
 			draw_objs(image,objs,output_stracks,num_frames,tracker);
 
 			
-			total_ms = total_ms + chrono::duration_cast<chrono::microseconds>(trackerend - start).count();
+			total_ms =chrono::duration_cast<chrono::milliseconds>(trackerend - start).count();
 
-			cv::putText(image, cv::format("frame: %d fps: %d num: %d", num_frames, num_frames * 1000000 / total_ms, output_stracks.size()),
+			cv::putText(image, cv::format("frame: %d FPS: %d num: %d", num_frames, num_frames * 1000 / total_ms, output_stracks.size()),
 							cv::Point(0, 30), 0, 0.6, cv::Scalar(0, 0, 255), 2, LINE_AA);
 
 			auto allend = std::chrono::system_clock::now();
 
-			auto tc = (double)std::chrono::duration_cast<std::chrono::microseconds>(allend - start).count() /1000.;
+			auto tc = (double)std::chrono::duration_cast<std::chrono::milliseconds>(allend - start).count() /1000.;
+			// printf("cpp time cost %2.4lf ms\n", chrono::duration_cast<chrono::milliseconds>(allend - s2).count() / 1000.);
 			// printf("all time cost %2.4lf ms\n", tc);
-			std::string text="../data/image/1image_"+std::to_string(num_frames)+".png";
-			cv::imwrite(text, image);
+			// std::string text="../data/image/1image_"+std::to_string(num_frames)+".png";
+			// cv::imwrite(text, image);
 			cv::imshow("result", image);
 			video.write(image);
 			if (cv::waitKey(10) == 'q')
@@ -182,7 +187,8 @@ int main(int argc, char **argv)
 			}
 		}
 		video.release();
-
+		auto e1 = std::chrono::system_clock::now();
+		// printf("cpp time cost %2.4lf ms\n", chrono::duration_cast<chrono::milliseconds>(e1 - s2).count() / 1000.);
 	}
 	else
 	{
@@ -213,12 +219,12 @@ int main(int argc, char **argv)
 			yolov8->draw_objects(image, res, objs, CLASS_NAMES, COLORS, 0);
 			// yolov8->draw_objects(image, res, objs, CLASS_NAMES, COLORS);
 			auto tc = (double)
-						  std::chrono::duration_cast<std::chrono::microseconds>(end - start)
+						  std::chrono::duration_cast<std::chrono::milliseconds>(end - start)
 							  .count() /
 					  1000.;
 			printf("Detection cost %2.4lf ms\n", tc);
 			auto tt = (double)
-						  std::chrono::duration_cast<std::chrono::microseconds>(trackerend - trackerstart)
+						  std::chrono::duration_cast<std::chrono::milliseconds>(trackerend - trackerstart)
 							  .count() /
 					  1000.;
 			printf("Tracker cost %2.4lf ms\n", tt);
